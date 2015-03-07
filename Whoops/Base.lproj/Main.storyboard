@@ -135,7 +135,7 @@
                                             <outlet property="frontImg" destination="cA2-ik-IRr" id="c4s-2p-2GM"/>
                                             <outlet property="likeButton" destination="914-KR-5Pw" id="GNi-9m-3mD"/>
                                             <outlet property="title" destination="fis-Jg-Pax" id="AH9-hs-kCV"/>
-                                            <segue destination="jlU-ce-qYK" kind="show" id="2SQ-MF-ekt"/>
+                                            <segue destination="Wk0-ns-rU1" kind="show" id="agJ-SV-Lfc"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="headCell" rowHeight="50" id="vSA-3R-2bV" customClass="SearchHeadCell" customModule="Whoops" customModuleProvider="target">
@@ -207,37 +207,32 @@
             </objects>
             <point key="canvasLocation" x="2543" y="-173"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="zVJ-C1-fqz">
+        <!--University View Controller-->
+        <scene sceneID="ah0-ZC-v5T">
             <objects>
-                <viewController id="jlU-ce-qYK" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kdR-sP-Pox"/>
-                        <viewControllerLayoutGuide type="bottom" id="NeU-WC-Mga"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tvg-Ad-Wk1">
+                <tableViewController id="Wk0-ns-rU1" customClass="UniversityViewController" customModule="Whoops" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lOc-zH-ymI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="320" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hrl-hP-bad">
-                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" red="0.17221837600000001" green="0.13255698960000001" blue="0.36251183710000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="hrl-hP-bad" secondAttribute="trailing" id="HTr-a7-Unf"/>
-                            <constraint firstItem="hrl-hP-bad" firstAttribute="leading" secondItem="tvg-Ad-Wk1" secondAttribute="leading" id="g8f-Az-ue3"/>
-                            <constraint firstItem="hrl-hP-bad" firstAttribute="top" secondItem="kdR-sP-Pox" secondAttribute="bottom" id="hV2-tJ-zfW"/>
-                            <constraint firstItem="hrl-hP-bad" firstAttribute="bottom" secondItem="NeU-WC-Mga" secondAttribute="top" id="y3o-E6-4im"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4qf-By-gyD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Jk3-nu-Muy">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jk3-nu-Muy" id="BAb-qf-2c5">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Wk0-ns-rU1" id="8j2-QG-K80"/>
+                            <outlet property="delegate" destination="Wk0-ns-rU1" id="PVA-uE-b35"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gdl-PL-4Cn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3345" y="-172"/>
+            <point key="canvasLocation" x="3293" y="-173"/>
         </scene>
         <!--Likes-->
         <scene sceneID="q2o-qI-qsC">
