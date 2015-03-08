@@ -11,6 +11,7 @@ import UIKit
 class SearchResultCell: UITableViewCell {
     var isHighLighted = Bool()
     var currentIndex = Int()
+    
     var favorite = []
     @IBOutlet weak var frontImg: UIImageView!
     @IBOutlet weak var title: UILabel!

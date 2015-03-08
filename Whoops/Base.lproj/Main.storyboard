@@ -211,7 +211,7 @@
         <scene sceneID="ah0-ZC-v5T">
             <objects>
                 <tableViewController id="Wk0-ns-rU1" customClass="UniversityViewController" customModule="Whoops" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lOc-zH-ymI">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lOc-zH-ymI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.17221837600000001" green="0.13255698960000001" blue="0.36251183710000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -629,6 +629,7 @@
                                             <outlet property="PostImage" destination="ibD-lP-AqU" id="yXL-kl-X22"/>
                                             <outlet property="Replies" destination="OzR-yH-1sS" id="l7G-vc-dAG"/>
                                             <outlet property="TimePosted" destination="aB7-5X-Puy" id="0Uu-Hi-ksv"/>
+                                            <segue destination="bis-Iu-gTy" kind="show" id="9nv-jE-7Bp"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -653,6 +654,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6FF-aB-QZY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1679" y="1274"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="v7b-4W-a6W">
+            <objects>
+                <tableViewController id="bis-Iu-gTy" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="w07-Ta-h3A">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.17221837600000001" green="0.13255698960000001" blue="0.36251183710000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="VvR-UW-HEn">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VvR-UW-HEn" id="15W-fT-4Yv">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bis-Iu-gTy" id="DZa-Zw-gkf"/>
+                            <outlet property="delegate" destination="bis-Iu-gTy" id="Qpb-3e-eL9"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aMp-h3-H4a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2379" y="1274"/>
         </scene>
         <!--Profile-->
         <scene sceneID="G8k-Al-hug">

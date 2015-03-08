@@ -13,7 +13,7 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
     @IBOutlet weak var searchTableView: UITableView!
     var _db = ["Johns Hopkins University", "George Washington University", "GeorgeTown University", "American University", "New York University"]
     var filteredTableData = [String]()
-    var myFavorite = ["Johns Hopkins University", "George Washington University"]
+    var myFavorite = [String]()
     var nearby = ["GeorgeTown University"]
     var resultSearchController = UISearchController()
 
@@ -102,6 +102,7 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
         if self.resultSearchController.active
         {
             cell.title.text = self.filteredTableData[row]
+            //self._db.rem
             cell.isHighLighted = false
             cell.backgroundView = nil
             cell.backgroundColor = UIColor.clearColor()
@@ -158,16 +159,19 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
             {
                 let selectedUniversity = self.filteredTableData[indexPath.row]
                 university.currentUniversity = selectedUniversity
+                //self.resultSearchController.resignFirstResponder()
             }
             else
             {
                 if indexPath.section == 0{
                     let selectedUniversity = self.myFavorite[indexPath.row]
                     university.currentUniversity = selectedUniversity
+                  //  self.resultSearchController.resignFirstResponder()
                 }
                 if indexPath.section == 1{
                     let selectedUniversity = self.nearby[indexPath.row]
                     university.currentUniversity = selectedUniversity
+                  //  self.resultSearchController.resignFirstResponder()
                 }
             }
         }
